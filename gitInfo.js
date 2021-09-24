@@ -96,3 +96,7 @@ let commit = {
 */
 
 //CODE HERE
+let push = {
+    description: 'git push allows you to upload your locally commited files to a designated remote repository',
+    code: 'git push',
+}
