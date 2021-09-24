@@ -6,12 +6,39 @@ const rl = readline.createInterface({
     output: process.stdout,
 })
 
-rl.userNamePrompt('Please enter your username...', function(name){
+rl.question("Please enter your username...", function(name) {
     console.log(`Welcome, ${name}, to the password validator tool.`);
-    rl.close();
+    rl.question("Please enter your desired password...", function(country) {
+        if(country.length > 10) {
+           console.log('Your password meets all required criteria! Thank you!');
+        }
+        else {
+        console.log('Your password does not meet all required creiteria.');
+        }
+        rl.close();
+    });
+});
+
+rl.on("close", function() {
+    console.log("\nBYE BYE !!!");
+    process.exit(0);
+});
+/*
+rl.question('Please enter your username...', function(name){
+    //console.log(`Welcome, ${name}, to the password validator tool.`);
+    rl.question('Please enter you password...'), function(password) {
+        if(password.length >= 10) {
+            console.log('Your password meets all of the required criteria! Thank you!');
+        }
+        else {
+            console.log('Your password does not meet all of the required criteria.');
+        }
+    }
+
 })
 
-rl.passwordPrompt('Please enter your password to validate...', function(password){
+/*
+rl.question('Please enter your password to validate...', function(password){
     if(password.length >= 10) {
         console.log('Your password meets all of the required criteria! Thank you!');
     }
@@ -20,28 +47,13 @@ rl.passwordPrompt('Please enter your password to validate...', function(password
     }
     rl.close();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-do {let userName = prompt("Please enter your Username");
-    if(userName != null) {
-        welcomUser(userName)
-    }
-} 
-while (userName == null);
-
-
-function welcomUser(name) {
-    console.log(`Welcome ${name} to the password validator tool`);
-}
 */
+
+
+
+
+
+
+
+
+
