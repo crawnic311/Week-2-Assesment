@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = "Git is a software that developers use to track changes they make to the programs they are creating and maintaning";
 
 //////////////////PROBLEM 2////////////////////
 /*
