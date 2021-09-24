@@ -4,12 +4,15 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 })
-
+var valid = 0;
 rl.question("Please enter your username...", function(name) {
     console.log(`Welcome, ${name}, to the password validator tool.`);
+    close(valid);
+});
+
+function getPassword() {
     rl.question("Please enter your desired password...", function(password) {
         let specialArray = ["!", '@', '#', '$', '%', '^', '&', '*'];
-        let valid = 0;
         for(let i = 0; i < specialArray.length; i++) {
             if(password.includes(specialArray[i])) {
                 valid += 1;
@@ -26,11 +29,27 @@ rl.question("Please enter your username...", function(name) {
         else {
         console.log('Your password needs to be at least 10 characters long and include at least 1 special character to be valid.');
         }
-        rl.close();
+        close(valid);
     });
-});
+}
 
-rl.on("close", function() {
+function close(validity) {
+    if(validity == 0) {
+        getPassword();
+    }
+    else {
+        console.log('Thanks for visiting!');
+        rl.close();
+    }
+}
+       
+
+
+/*
+rl.on(valid, function() {
+    if(valid) { 
+        rl.question("Please enter your password again");
+    }
     console.log("\nBYE BYE !!!");
     process.exit(0);
 });
