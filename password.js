@@ -15,11 +15,16 @@ rl.question("Please enter your username...", function(name) {
                 valid += 1;
             }
         }
-        if(password.length >= 10 && valid > 0) {
-           console.log('Your password meets all required criteria! Thank you!');
+        if(password.length >= 10) {
+            if(valid > 0) {
+                console.log('Your password meets all required criteria! Thank you!');
+            }
+            else {
+                console.log('Your password needs at least 1 special character (!, @, #, $, %, ^, &, *) to be valid.');
+            }
         }
         else {
-        console.log('Your password does not meet all required creiteria.');
+        console.log('Your password needs to be at least 10 characters long and include at least 1 special character to be valid.');
         }
         rl.close();
     });
