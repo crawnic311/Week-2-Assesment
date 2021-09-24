@@ -15,10 +15,16 @@
 */
 
 //CODE HERE
+const me = {
+  firstName: 'Dillon',
+  state: 'Utah',
+  age: 30,
+  greeter: function() {
+    return `Hello! My name is ${me.firstName} and I live in ${me.state}`
+  }
+}
 
-
-
-
+console.log(me.greeter());
 
 //////////////////PROBLEM 2////////////////////
 /*
