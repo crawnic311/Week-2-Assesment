@@ -19,6 +19,7 @@ let gitDefinition = "Git is a software that developers use to track changes they
 */
 
 //CODE HERE
+let gitHubDefinition = "GitHub is a SaaS company that helps developers share their version histories when using git. It's like google drive where docs and sheets can be shared, except github is primarily used for git."
 
 //////////////////PROBLEMS 3 - 8////////////////////
 /*
