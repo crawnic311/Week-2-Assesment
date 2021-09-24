@@ -21,6 +21,17 @@ console.log(sum(3, 4));
 */
 
 //CODE HERE
+function greaterThanFive(number) {
+  if(number > 5) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+console.log(greaterThanFive(7));
+console.log(greaterThanFive(4));
 
 //////////////////PROBLEM 3////////////////////
 /*
