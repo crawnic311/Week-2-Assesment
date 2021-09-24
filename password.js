@@ -1,5 +1,4 @@
 
-const { RSA_SSLV23_PADDING } = require('constants');
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -8,8 +7,15 @@ const rl = readline.createInterface({
 
 rl.question("Please enter your username...", function(name) {
     console.log(`Welcome, ${name}, to the password validator tool.`);
-    rl.question("Please enter your desired password...", function(country) {
-        if(country.length >= 10 && country.includes('*')) {
+    rl.question("Please enter your desired password...", function(password) {
+        let specialArray = ["!", '@', '#', '$', '%', '^', '&', '*'];
+        let valid = 0;
+        for(let i = 0; i < specialArray.length; i++) {
+            if(password.includes(specialArray[i])) {
+                valid += 1;
+            }
+        }
+        if(password.length >= 10 && valid > 0) {
            console.log('Your password meets all required criteria! Thank you!');
         }
         else {
@@ -23,7 +29,23 @@ rl.on("close", function() {
     console.log("\nBYE BYE !!!");
     process.exit(0);
 });
+
 /*
+var password = "Smouds311*"
+let specialArray = ["!", '@', '#', '$', '%', '^', '&', '*'];
+let valid = 0;
+for(let i = 0; i < specialArray.length; i ++) {
+    if(password.includes(specialArray[i])) {
+        valid += 1;
+    }
+
+
+}
+
+/*
+
+
+
 rl.question('Please enter your username...', function(name){
     //console.log(`Welcome, ${name}, to the password validator tool.`);
     rl.question('Please enter you password...'), function(password) {
