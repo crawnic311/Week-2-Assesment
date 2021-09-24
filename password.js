@@ -5,9 +5,10 @@ const rl = readline.createInterface({
     output: process.stdout,
 })
 var valid = 0;
+var lengthCheck = false;
 rl.question("Please enter your username...", function(name) {
     console.log(`Welcome, ${name}, to the password validator tool.`);
-    close(valid);
+    close(valid, lengthCheck);
 });
 
 function getPassword() {
@@ -21,6 +22,7 @@ function getPassword() {
         if(password.length >= 10) {
             if(valid > 0) {
                 console.log('Your password meets all required criteria! Thank you!');
+                lengthCheck = true;
             }
             else {
                 console.log('Your password needs at least 1 special character (!, @, #, $, %, ^, &, *) to be valid.');
@@ -29,12 +31,13 @@ function getPassword() {
         else {
         console.log('Your password needs to be at least 10 characters long and include at least 1 special character to be valid.');
         }
-        close(valid);
+        close(valid, lengthCheck);
     });
 }
 
-function close(validity) {
-    if(validity == 0) {
+function close(validity, lengthCheck) {
+    if(validity == 0 || lengthCheck == false) {
+        valid = 0;
         getPassword();
     }
     else {
