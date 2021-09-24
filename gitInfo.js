@@ -84,7 +84,10 @@ let add = {
 */
 
 //CODE HERE
-
+let commit = {
+    description: 'git commit command creates a saved version of the file you are working on. It allows you to comment on that saved version and to later push it to the remote repository.',
+    code: 'git commit -m "First Commit"',
+}
 
 //////////////////PROBLEM 8////////////////////
 /*
