@@ -43,3 +43,18 @@ console.log(numbers);
 */
 
 // CODE HERE
+function bigOrSmall(arr) {
+  var answers = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 100) {
+      answers.push('big');
+    }
+    else {
+      answers.push('small');
+    }
+  }
+  return answers;
+}
+
+const testArray = [101, 34, 44, 156, 99, 100, 173, 188];
+console.log(bigOrSmall(testArray));
