@@ -72,6 +72,10 @@ const status = {
 */
 
 //CODE HERE
+let add = {
+    description: 'git add adds the specified file into your local git repository. It also sets the stage for your next git commit, allowing you to push the file to github.',
+    code: 'git add',
+}
 
 //////////////////PROBLEM 7////////////////////
 /*
