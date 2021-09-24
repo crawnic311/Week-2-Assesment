@@ -8,6 +8,7 @@ let myName = "Dillon";
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
 //CODE HERE
+let faveNum = 311;
 
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
