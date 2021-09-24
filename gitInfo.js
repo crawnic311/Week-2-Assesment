@@ -36,7 +36,10 @@ let gitHubDefinition = "GitHub is a SaaS company that helps developers share the
 */
 
 //CODE HERE
-
+const init = {
+    description: 'git init initilizes or creates a new git repository on your local computer',
+    code: 'git init',
+}
 //////////////////PROBLEM 4////////////////////
 /*
     Create an object called 'clone' with 'description' and 'code' properties 
