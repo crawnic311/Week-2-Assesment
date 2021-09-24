@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 rl.question("Please enter your username...", function(name) {
     console.log(`Welcome, ${name}, to the password validator tool.`);
     rl.question("Please enter your desired password...", function(country) {
-        if(country.length > 10) {
+        if(country.length >= 10 && country.includes('*')) {
            console.log('Your password meets all required criteria! Thank you!');
         }
         else {
