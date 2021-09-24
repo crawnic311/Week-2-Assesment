@@ -51,8 +51,8 @@ function findZWords(word) {
   }
 }
 
-findZWords("Zanthar");
-findZWords("Danilo Zan");
+findZWords('Zanthar');
+findZWords('Danilo Zan');
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -62,3 +62,8 @@ findZWords("Danilo Zan");
 */
 
 //CODE HERE
+function iLove(name, love) {
+  console.log(`${name} loves ${love}`);
+}
+
+iLove('Dillon', 'food');
