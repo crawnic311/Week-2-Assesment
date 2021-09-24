@@ -40,6 +40,7 @@ const init = {
     description: 'git init initilizes or creates a new git repository on your local computer',
     code: 'git init',
 }
+
 //////////////////PROBLEM 4////////////////////
 /*
     Create an object called 'clone' with 'description' and 'code' properties 
@@ -47,6 +48,10 @@ const init = {
 */
 
 //CODE HERE
+const clone = {
+    description: 'git clone copies or creates a clone of an existing local or remote repository',
+    code: 'git clone',
+}
 
 //////////////////PROBLEM 5////////////////////
 /*
