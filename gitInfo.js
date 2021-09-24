@@ -60,6 +60,10 @@ const clone = {
 */
 
 //CODE HERE
+const status = {
+    description: 'git status shows you which branch you are on, whether that branch is up to date, and which files have been modified and not pushed as well as files that are not being tracked at all',
+    code: 'git status',
+}
 
 //////////////////PROBLEM 6////////////////////
 /*
