@@ -42,6 +42,17 @@ console.log(greaterThanFive(4));
 */
 
 //CODE HERE
+function findZWords(word) {
+  if(word.startsWith('Z')) {
+    console.log('the name begins with Z');
+  }
+  else {
+    console.log('the name does not begin with Z');
+  }
+}
+
+findZWords("Zanthar");
+findZWords("Danilo Zan");
 
 //////////////////PROBLEM 4////////////////////
 /*
