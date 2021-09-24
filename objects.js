@@ -51,3 +51,20 @@ console.log(me.greeter());
 */
 
 //CODE HERE
+function carFactory(make, model, year) {
+  const vehicle = {
+    vMake: make,
+    vModel: model,
+    vYear: year,
+  }
+  if(year > 2018) {
+    vehicle['isNew'] = true;
+  }
+  else {
+    vehicle['isNew'] = false;
+  }
+  return vehicle;
+}
+
+console.log(carFactory("Toyota", "Tundra", 2020));
+console.log(carFactory("Toyota", "Tundra", 2007));
